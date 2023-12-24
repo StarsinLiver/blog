@@ -52,11 +52,11 @@ jobs:
     # (5) 빌드 결과물을 S3 버킷에 업로드
     - name: Upload to AWS S3
       run: |
-        zip -r deployment.zip
+        zip -r deployment.zip *
         aws s3 cp deployment.zip s3://$S3_BUCKET_NAME/$GITHUB_SHA.zip
 
         cp appspec.yml deployment/
-        aws s3 cp deployment s3://$S3_BUCKET_NAME/$GITHUB_SHA.zip --recursive
+        aws s3 cp deployment s3://$S3_BUCKET_NAME/$GITHUB_SHA --recursive
         
 
     # (6) S3 버킷에 있는 파일을 대상으로 CodeDeploy 실행
@@ -66,4 +66,5 @@ jobs:
           --application-name ${{ env.CODE_DEPLOY_APPLICATION_NAME }} \
           --deployment-config-name CodeDeployDefault.AllAtOnce \
           --deployment-group-name ${{ env.CODE_DEPLOY_DEPLOYMENT_GROUP_NAME }} \
-          --s3-location bucket=$S3_BUCKET_NAME,key=$GITHUB_SHA.zip,bundleType=zip
+          --s3-location bucket=$S3_BUCKET_NAME,key=$GITHUB_SHA/$GITHUB_SHA.zip,bundleType=zip
+
