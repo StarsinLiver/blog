@@ -49,15 +49,20 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ap-northeast-2
 
-    # (5) 빌드 결과물을 S3 버킷에 업로드
+# (5) 빌드 결과물을 S3 버킷에 업로드
     - name: Upload to AWS S3
       run: |
         zip -r deployment.zip *
         aws s3 cp deployment.zip s3://$S3_BUCKET_NAME/$GITHUB_SHA.zip
 
-        cp appspec.yml deployment/
+        # deployment/ 디렉토리 생성
+        mkdir deployment
+
+        # appspec.yml 파일을 deployment/ 디렉토리로 복사
+        cp ./appspec.yml deployment/
+
+        # deployment/ 디렉토리의 내용을 S3 버킷으로 재귀적으로 업로드
         aws s3 cp deployment s3://$S3_BUCKET_NAME/$GITHUB_SHA --recursive
-        
 
     # (6) S3 버킷에 있는 파일을 대상으로 CodeDeploy 실행
     - name: Deploy to AWS EC2 from S3
