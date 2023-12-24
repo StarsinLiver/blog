@@ -55,6 +55,9 @@ jobs:
         zip -r deployment.zip *
         aws s3 cp deployment.zip s3://$S3_BUCKET_NAME/$GITHUB_SHA.zip
 
+        # 있으면 삭제
+        rm -rf deployment
+        
         # deployment/ 디렉토리 생성
         mkdir deployment
 
