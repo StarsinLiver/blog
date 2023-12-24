@@ -1,0 +1,42 @@
+[33mcommit 13c9c851a09cb3cf7d634d653789c4d63062f62d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: e3c5031 d6d5413
+Author: StarsinLiver <141594965+StarsinLiver@users.noreply.github.com>
+Date:   Sun Dec 24 14:25:58 2023 +0900
+
+    Merge branch 'main' of https://github.com/StarsinLiver/blog
+
+[33mcommit e3c5031654643ac105156937ab2a5f64df55a221[m
+Author: StarsinLiver <141594965+StarsinLiver@users.noreply.github.com>
+Date:   Sun Dec 24 14:25:09 2023 +0900
+
+    test
+
+[33mcommit d6d541327eeb65fc51ba56ff4961a57d44c25c82[m
+Author: StarsinLiver <141594965+StarsinLiver@users.noreply.github.com>
+Date:   Sun Dec 24 12:54:15 2023 +0900
+
+    Delete .github/workflows/blank.yml
+    
+    h
+
+[33mcommit 421e7b7e8744c788b83ae58112702adbf2faaeb8[m
+Author: StarsinLiver <141594965+StarsinLiver@users.noreply.github.com>
+Date:   Sun Dec 24 12:43:07 2023 +0900
+
+    Update blank.yml
+    
+    DD
+
+[33mcommit 66f3f30fc7e45185a6dc02413ecd020581fd760f[m
+Author: StarsinLiver <141594965+StarsinLiver@users.noreply.github.com>
+Date:   Sun Dec 24 12:42:36 2023 +0900
+
+    mainCI.yml
+    
+    AWS TEST
+
+[33mcommit 320d5385956a8b813ef915e8c62821ee2c4201d2[m
+Author: StarsinLiver <141594965+StarsinLiver@users.noreply.github.com>
+Date:   Sun Dec 24 12:38:23 2023 +0900
+
+    aws
