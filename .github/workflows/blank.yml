@@ -18,10 +18,15 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ secrets.AWS_REGION  }}
+        aws-region: 여러분의_aws_지역
 
     - name: Upload test.txt to S3
-      run: aws s3 cp scripts/test.txt s3://my-github-actions-s2-bucket/
+      run: aws s3 cp scripts/test.txt s3://여러분의-s3-버킷-이름/
 
-    - name: Download test.txt on EC2
-      run: scp -i ${{ secrets.EC2_PRIVATE_KEY }} -o StrictHostKeyChecking=no ubuntu@52.78.132.72:/home/ubuntu/app
+    - name: Set up SSH key
+      run: |
+        echo "${{ secrets.EC2_PRIVATE_KEY }}" > private_key.pem
+        chmod 600 private_key.pem
+
+    - name: Download test.txt from EC2
+      run: scp -i private_key.pem -o StrictHostKeyChecking=no ubuntu@52.78.132.72:/home/ubuntu/app /home/ubuntu/app
