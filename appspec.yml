@@ -10,7 +10,7 @@ permissions:
   - object: /
     pattern: "**"
     owner: ubuntu
-    #group: ubuntu
+    group: ubuntu
 
 hooks:
   AfterInstall:
