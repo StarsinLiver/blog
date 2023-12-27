@@ -18,10 +18,10 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: 여러분의_aws_지역
+        aws-region: ap-northeast-2
 
     - name: Upload test.txt to S3
-      run: aws s3 cp scripts/test.txt s3://여러분의-s3-버킷-이름/
+      run: aws s3 cp scripts/test.txt s3://my-github-actions-s2-bucket/
 
     - name: Set up SSH key
       run: |
