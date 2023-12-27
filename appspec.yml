@@ -7,7 +7,7 @@ files:
     overwrite: no
 
 permissions:
-  - object: /home/ubuntu/app
+  - object: /home/ubuntu/app/
     #pattern: "**"
     owner: ubuntu
     group: ubuntu
