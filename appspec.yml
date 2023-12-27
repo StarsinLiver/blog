@@ -2,12 +2,12 @@ version: 0.0
 os: linux
 
 files:
-  - source:  /
+  - source:  ./
     destination: /home/ubuntu/app/
     overwrite: no
 
 permissions:
-  - object: /
+  - object: /home/ubuntu/app
     pattern: "**"
     owner: ubuntu
     group: ubuntu
