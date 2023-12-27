@@ -8,7 +8,7 @@ files:
 
 permissions:
   - object: /home/ubuntu/app/
-    #pattern: "**"
+    pattern: "**"
     owner: ubuntu
     group: ubuntu
 
@@ -17,11 +17,7 @@ hooks:
     - location: scripts/stop.sh
       timeout: 60
       runas: ubuntu
-      - chmod +x scripts/stop.sh
-      - ./scripts/stop.sh
   ApplicationStart:
     - location: scripts/start.sh
       timeout: 60
       runas: ubuntu
-      - chmod +x scripts/start.sh
-      - ./scripts/start.sh
