@@ -26,19 +26,22 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    #- name: Setup Node.js
-    #  uses: actions/setup-node@v4
-    #  with:
-    #     node-version: '14'  # 사용할 Node.js 버전을 지정
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+         node-version: '14'  # 사용할 Node.js 버전을 지정
 
-    #- name: Check Node v            # Node v 확인
-    #  run: node -v
+    - name: Check Node v            # Node v 확인
+      run: node -v
+
+    - name: go to src
+      run: cd src
         
-    #- name: Install dependencies    # 의존 파일 설치
-    #  run: npm install
+    - name: Install dependencies    # 의존 파일 설치
+      run: npm install
       
-    #- name: Generate build
-    #  run: npm run build
+    - name: Generate build
+      run: npm run build
       
     # (4) AWS 인증 (IAM 사용자 Access Key, Secret Key 활용)
     - name: Configure AWS credentials
