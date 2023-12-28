@@ -34,8 +34,8 @@ jobs:
     - name: Check Node v            # Node v 확인
       run: node -v
 
-    - name: go to src
-      run: cd src
+    #- name: go to src
+    #  run: cd src
         
     - name: Install dependencies    # 의존 파일 설치
       run: npm install
