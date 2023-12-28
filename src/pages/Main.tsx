@@ -423,7 +423,7 @@ function Main() {
                   <footer>
                   <p
                     className="text-left"
-                    style={{ marginLeft: "100px", whiteSpace: "pre" }}
+                    style={{ marginLeft: "100px"}}
                   >
                     FRONT : {value.projects.frontName} <br />
                     BACK-END : {value.projects.backendName} <br />
