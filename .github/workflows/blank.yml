@@ -29,7 +29,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-         node-version: '14'  # 사용할 Node.js 버전을 지정
+         node-version: '18'  # 사용할 Node.js 버전을 지정
 
     - name: Check Node v            # Node v 확인
       run: node -v
