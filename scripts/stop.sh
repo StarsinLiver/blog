@@ -5,5 +5,4 @@
 # exec > >(tee /var/log/codedeploy_stop.log|logger -t codedeploy_stop -s 2>/dev/console) 2>&1
 echo "애플리케이션을 중지합니다."
 # 여기에 애플리케이션 중지 명령어 또는 작업을 추가하세요.
-cp /home/ubuntu/app/scripts/test.txt /home/ubuntu
 
