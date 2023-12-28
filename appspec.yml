@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 
 files:
-  - source:  /build
+  - source: ./build  # 수정: 빌드 결과물의 실제 경로로 변경
     destination: /home/ubuntu/app
     overwrite: no
 
