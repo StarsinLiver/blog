@@ -26,8 +26,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    #- name: Check Node v            # Node v 확인
-    #  run: node -v
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '14'  # 사용할 Node.js 버전을 지정
+
+    - name: Check Node v            # Node v 확인
+      run: node -v
         
     - name: Install dependencies    # 의존 파일 설치
       run: npm install
