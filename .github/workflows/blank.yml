@@ -41,7 +41,7 @@ jobs:
       run: npm install
       
     - name: Generate build
-      run: npm run build
+      run: CI='false' npm run build
       
     # (4) AWS 인증 (IAM 사용자 Access Key, Secret Key 활용)
     - name: Configure AWS credentials
