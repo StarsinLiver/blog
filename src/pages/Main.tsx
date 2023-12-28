@@ -149,7 +149,6 @@ function Main() {
               <h2 style={{ lineHeight: "30px" }}>
                 안녕하세요. <br />
                 저는 백엔드 개발자를 지향하는 이산하라고 합니다. <br />
-                + git CD 테스트
               </h2>
             </div>
 
