@@ -6,3 +6,9 @@
 echo "애플리케이션을 중지합니다."
 # 여기에 애플리케이션 중지 명령어 또는 작업을 추가하세요.
 sudo systemctl stop nginx
+# build 파일 삭제
+sudo rm -rf /home/ubuntu/nginx/build
+# nginx 들어가기
+cd /home/ubuntu/nginx
+# build 배포 폴더 만들기
+mkdir build 
