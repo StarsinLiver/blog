@@ -26,8 +26,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Check Node v            # Node v 확인
-      run: node -v
+    #- name: Check Node v            # Node v 확인
+    #  run: node -v
         
     - name: Install dependencies    # 의존 파일 설치
       run: npm install
